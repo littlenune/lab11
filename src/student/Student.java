@@ -70,7 +70,8 @@ public class Student {
 	//TODO Improve this code. Let LocalDate and DateTimeFormatter parse
 	// the string for you.  Eliminate the use of Scanner!
 	private void setBirthdate(String datestr) {
-		birthdate = LocalDate.parse(datestr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		DateTimeFormatter format =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		birthdate = LocalDate.parse(datestr, format);
 	}
 	
 	@Override

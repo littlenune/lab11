@@ -7,8 +7,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * Calculate the time of read words using BufferedReader with a loop.
+ * @author Tunya Wittayasiripaiboon 5810546676
+ */
 public class Task2 implements Runnable {
 
+	/**
+	 * Read words usning BufferedReader with a loop.
+	 */
 	@Override
 	public void run() {
 		InputStream instream = Dictionary.getWordsAsStream();
@@ -38,6 +46,10 @@ public class Task2 implements Runnable {
 		}
 		
 	}
+	/**
+	 * Return string of task usage.
+	 * @return string of task usage.
+	 */
 	public String toString(){
 		return "Starting task: read words using BufferedReader.readLine() with a loop";
 	}

@@ -7,9 +7,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * Calculate the time append all the words form Dictionary to a String.
+ * @author Tunya Wittayasiripaiboon 5810546676
+ *
+ */
 public class Task5 implements Runnable {
 	static final int MAXCOUNT = 50_000;
 
+	/**
+	 * Append all the words from dictionary to a String.
+	 */
 	@Override
 	public void run() {
 		InputStream instream = Dictionary.getWordsAsStream();
@@ -33,6 +42,10 @@ public class Task5 implements Runnable {
 		System.out.printf("Done appending %d words to string.\n", count);
 
 	}
+	/**
+	 * Return string of task usage.
+	 * @return string of task usage.
+	 */
 	public String toString(){
 		return "Starting task: append "+MAXCOUNT+" words to a String using +";
 		

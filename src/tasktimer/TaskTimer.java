@@ -8,14 +8,15 @@ import java.util.function.Consumer;
 import java.util.concurrent.atomic.*;  // hack, using AtomicInteger as accumulator
 
 /**
- * Time how long it takes to perform some tasks
- * using different programming constructs.
- * 
- * TODO Improve this code by restructuring it to eliminate duplicate code.
+ * Get the elapsed time of each tasks and run the program.
+ * @author Tunya Wittayasiripaiboon 5810546676
  */
 public class TaskTimer
 {
-	/** Run all the tasks. */
+	/**
+	 * Run the tasks.
+	 * @param args
+	 */
 	public static void main(String [] args) {
 		execAndPrint(new Task1());
 		execAndPrint(new Task2());
@@ -24,6 +25,10 @@ public class TaskTimer
 		execAndPrint(new Task5());
 		execAndPrint(new Task6());
 	}
+	/**
+	 * Print out task usage of interested task also start , stop and get elapsed of the time.
+	 * @param task that wanted to test.
+	 */
 	public static void execAndPrint ( Runnable task ){
 		StopWatch time = new StopWatch();
 		System.out.println(task.toString());

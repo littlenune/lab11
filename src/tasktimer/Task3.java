@@ -8,8 +8,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.function.IntConsumer;
 
+/**
+ * 
+ * Calculate the time of read words using BufferedReader and Stream.
+ * @author Tunya Wittayasiriapiboon 5810546676
+ *
+ */
 public class Task3 implements Runnable {
 
+	/**
+	 * Read words using BufferedReader and Stream.
+	 */
 	@Override
 	public void run() {
 		InputStream instream = Dictionary.getWordsAsStream();
@@ -32,10 +41,19 @@ public class Task3 implements Runnable {
 				counter.getCount(), counter.average() );
 		
 	}
+	/**
+	 * Return string of task usage.
+	 * @return string of task usage.
+	 */
 	public String toString(){
 		 return "Starting task: read words using BufferedReader and Stream";
 		
 	}
+	/**
+	 * 
+	 * @author Tunya Wittayasiripaiboon 5810546676
+	 *
+	 */
 	static class IntCounter implements IntConsumer {
 		// count the values
 		public int count = 0;
